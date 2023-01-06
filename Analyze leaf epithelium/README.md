@@ -20,6 +20,7 @@ For this week of project, we work on several plant species and their epithelium 
 
 All these images we’ll help us to answer three questions : How are cells connected ? How can we infer the cell expansion direction ? And how many cells are there ? To answer these questions, we’ll work on Jupyter Notebooks
 
+
 **<span style="text-decoration:underline;">Python dependencies :</span>** 
 
 **Libraries :**
@@ -42,31 +43,32 @@ All these images we’ll help us to answer three questions : How are cells conne
 
 → `conda install seaborn-c conda-forge`
 
-→`pip install -U scikit-learn
+→`pip install -U scikit-learn`
+
 
 **<span style="text-decoration:underline;">A "how to use" tutorial for each use case :</span>**
 
 
 
-* **How are cells connected ? **
+* **How are cells connected ?**
 
 As for the other questions the first step is to classify all your images in folders according to their features which are : “Rondes + veines”, “Stomates”, “Normal”, “Normal + veines”, “ Puzzle”, “Puzzle + veines”, “Puzzle sombre”. The second step is to import all the libraries and functions listed above. Then you will have one cell to run for each group. In this cell you will create the skeleton you see below, create a dataframe with all the non triangular junctions and their centroid coordinates by images and a dataframe with all the images names, total number of junctions, number of non triangular junctions, name of the image csv. After you run the code for each group you have the code to concatenate the 7 dataframes to have the final csv and create the barplot. 
 
 
-![alt_text](Docs/images/image1.png "image_tooltip")
+![alt_text](Docs/images/image4.png "image_tooltip")
 
 ![alt_text](Docs/images/image2.png "image_tooltip")
 
 
 
 
-* **How can we infer the cell expansion direction ? **
+ **How can we infer the cell expansion direction ?**
 
 As for the other questions, the first step is to classify the images in different folders according to some characteristics: “Rondes + veines”, “Stomates”, “Normal”, “Normal + veines”, “ Puzzle”, “Puzzle + veines”, “Puzzle sombre”. Then, the code should be run: it will start by importing all necessary libraries and functions including one .py document that contains all functions written for this specific question. For each group of images you can run the code which will return a DataFrame containing the name of the image, the mean area of it cells and the mean lobeyness. At the end, all those DataFrames are concatenated and the column “Specie” is added. Finally, run the last kernels that will show a more visual representation of the lobeyness and cell area in function of the species.
 
 
 
-* **How many cells are there ?**
+- **How many cells are there ?**
 
 To count the number of cells, the first step is to classify the images in the different folders : “Rondes + veines”, “Stomates”, “Normal”, “Normal + veines”, “ Puzzle”, “Puzzle + veines”, “Puzzle sombre”.
 
@@ -75,24 +77,25 @@ Then, in the code, first import all the libraries and functions you need and tha
 This is what the code does to count each cell.
 
 
+![alt_text](Docs/images/image5.png "image_tooltip")
+
 ![alt_text](Docs/images/image3.png "image_tooltip")
 
-![alt_text](Docs/images/image4.png "image_tooltip")
+![alt_text](Docs/images/image1.png "image_tooltip")
 
-![alt_text](Docs/images/image5.png "image_tooltip")
 
 
 **<span style="text-decoration:underline;">Limitations :</span>**
 
 
 
-* **How are cells connected ? **
+* **How are cells connected ?**
 
 For use case 2 : “How are cells connected ?”, we had a problem with the image groups “Normal veiness” and “puzzle veines”  where the creation of the mask function returned a quasi empty mask. Due to the deadline we chose to exclude those images from this use case.
 
 
 
-* **How can we infer the cell expansion direction ? **
+* **How can we infer the cell expansion direction ?**
 
 Most limitations are linked to the segmentation, as the result depends on it. Indeed, some images were really hard to precisely segment and we needed to do some concessions because of the limited time. As this question deals directly with the shape of cells which is indicated with the segmentation labels, this lack of precision is particularly important. Furthermore, it could be interesting to have DataFrames containing the information related to all cells instead of a mean area or mean lobyeness per image. This was a shortcut used to simplify the work.
 
